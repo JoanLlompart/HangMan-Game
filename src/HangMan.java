@@ -23,7 +23,7 @@ public class HangMan {
 
     public static void main(String[] args) {
         //Scanner scanner = new Scanner()
-        WordFactory wf = new DefaultWordFactory();
+        WordFactory wf = new DictWordFactory();
         HangMan h = new HangMan(wf);
         h.play();
     }

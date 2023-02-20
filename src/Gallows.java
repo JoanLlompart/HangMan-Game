@@ -14,7 +14,7 @@ public abstract class Gallows {
     }
 
     boolean isHung() {
-        System.out.print("GAME OVER");
+      /*  System.out.print("GAME OVER");
         System.out.println(" ==============  ");
         System.out.println(" _______________");
         System.out.println(" |              |");
@@ -26,14 +26,72 @@ public abstract class Gallows {
         System.out.println(" |");
         System.out.println(" |");
 
+
+       */
         System.out.println();
 
-        return pointsLeft < 0;
+        //Punts igual o mes petits a cero
+        return pointsLeft <= 0;
     }
 }
 
 
 class TextGallows extends Gallows {
+    String[] graphics = {
+            "  +---+\n" +
+                    "  |   |\n" +
+                    "  O   |\n" +
+                    " /|\\  |\n" +
+                    " / \\  |\n" +
+                    "      |\n" +
+                    "========='"
+            ,"  +---+\n" +
+            "  |   |\n" +
+            "  O   |\n" +
+            " /|\\  |\n" +
+            " /    |\n" +
+            "      |\n" +
+            "=========" ,
+            "  +---+\n" +
+                    "  |   |\n" +
+                    "  O   |\n" +
+                    " /|\\  |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "=========",
+            " +---+\n" +
+                    "  |   |\n" +
+                    "  O   |\n" +
+                    " /|   |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "=========",
+            " +---+\n" +
+                    "  |   |\n" +
+                    "  O   |\n" +
+                    "  |   |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "=========",
+            " +---+\n" +
+                    "  |   |\n" +
+                    "  O   |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "=========",
+            "  +---+\n" +
+                    "  |   |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "      |\n" +
+                    "========="
+
+
+    };
+    @Override
     void display() {
+        System.out.println(graphics[pointsLeft]);
     }
 }
