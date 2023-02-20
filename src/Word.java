@@ -5,6 +5,8 @@ public class Word {
     String wordString;
     char[] guions;
 
+
+
     Word(String s) {
 
         this.wordString = s;

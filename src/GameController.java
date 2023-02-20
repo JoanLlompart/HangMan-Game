@@ -13,6 +13,9 @@ public class GameController {
     }
 
     void playGame(Word w) {
+        //Contador de intents fallits
+        int contador = 5;
+
         while (!w.isGuessed()) {
             //Mostrar paraula sense dir quina paraula intentem adivinar
             wordDisplay.display(w);
@@ -21,10 +24,18 @@ public class GameController {
             char c = getInput();
             w.doGuess(c); //li pasa la lletra
             boolean encert = w.doGuess(c);
+
             if (encert) {
                 System.out.println("Molt bé");
             } else {
+                gallows.addPart();
                 System.out.println("NOOOO");
+                contador--;
+                System.out.println("Intents restants :" + contador);
+            }
+            if (contador<0) {
+               //Si se ha quedat sense intents Dibuixa Ahorcado
+               gallows.isHung();
             }
         }
         System.out.println("FIII");
