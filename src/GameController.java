@@ -58,8 +58,11 @@ public class GameController {
     }
 
     private char getInput() {
-
         Scanner s = new Scanner(System.in);
+        System.out.println("Escriu una lletra: ");
+        String line = s.nextLine();
+        return line.toUpperCase().charAt(0);
+       /* Scanner s = new Scanner(System.in);
         System.out.println("Escriu una lletra: ");
         String line = "";
         do {
@@ -67,12 +70,15 @@ public class GameController {
             s.nextLine();
         } while (!goodInput(line));
             return line.toUpperCase().charAt(0);
+
+
+        */
     }
 
     private boolean goodInput(String line) {
         if (line.length() != 1) return false;
         char c = line.toUpperCase().charAt(0);
-        if (c =='Ç' || c == 'Ñ' ||c == 'Á') return false;
+        if (c =='Ç' || c == 'Ñ' ||c == 'A')
         if (c < 'A' || c > 'Z') return false;
         return true;
     }

@@ -15,7 +15,7 @@ class DictWordFactory implements WordFactory {
     public Word makeWord() {
 
         String[] llista =  {
-                "TAULA","POMA","AVIO","CAMIO","FINESTRA","TECLAT","ESCOLA","MOTOR","ROBOT"
+                "TAULA","POMA","AVIO","CAMIO","FINESTRA","TECLAT","ESCOLA","MOTOR","ROBOT","AMOR", "FAMILIA","ALEGRIA","MOTIVACIO"
         };
 
         // Torna una paraula aleatoria
